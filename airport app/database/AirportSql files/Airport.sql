@@ -1,0 +1,7 @@
+CREATE TABLE airport (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    code VARCHAR(10) NOT NULL UNIQUE,
+    city_id INT,
+    FOREIGN KEY (city_id) REFERENCES city(id) ON DELETE SET NULL
+);
